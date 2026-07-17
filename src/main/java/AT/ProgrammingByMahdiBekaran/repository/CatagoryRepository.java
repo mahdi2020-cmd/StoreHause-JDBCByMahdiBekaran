@@ -27,7 +27,7 @@ public class CatagoryRepository {
         connection.close();
         return i;
     }
-    public boolean uniqeName(String catagory) throws SQLException {
+    public boolean FindByName(String catagory) throws SQLException {
         String query = "SELECT * FROM storhaus s WHERE s.name = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, catagory);

@@ -21,7 +21,7 @@ public class CatagoryService {
 
 
     public void save(String catagory) throws SQLException {
-        if (catagoryRepository.uniqeName(catagory)) {
+        if (catagoryRepository.FindByName(catagory)) {
             System.out.println("catagory cant save ! weil this name Exists");
 
         } else {
