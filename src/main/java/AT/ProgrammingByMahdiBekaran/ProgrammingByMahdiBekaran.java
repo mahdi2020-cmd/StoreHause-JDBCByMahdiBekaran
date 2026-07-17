@@ -21,16 +21,25 @@ public class ProgrammingByMahdiBekaran {
 //        CatagoryService catagoryService = new CatagoryService();
 //        catagoryService.save(name);
 
-        System.out.println("Please the Catagory auswahlen ? :) ");
-        String name = scanner.nextLine();
-        System.out.println("Please the Enter inventory ? :) ");
-        int inventory = scanner.nextInt();
-        System.out.println("Please the Enter catagoryId? :) ");
-        int catagoryId = scanner.nextInt();
+//        System.out.println("Please the Catagory auswahlen ? :) ");
+//        String name = scanner.nextLine();
+//        System.out.println("Please the Enter inventory ? :) ");
+//        int inventory = scanner.nextInt();
+//        System.out.println("Please the Enter catagoryId? :) ");
+//        int catagoryId = scanner.nextInt();
+//
+//        Goods goods = new Goods(name, inventory, catagoryId);
+//        GoodsService goodsService = new GoodsService();
+//        goodsService.save(goods);
+//        System.out.println(goods);
 
-        Goods goods = new Goods(name, inventory, catagoryId);
+        System.out.println("Please the Catagory auswahlen ? :) ");
+        int id = scanner.nextInt();
+
+
+
         GoodsService goodsService = new GoodsService();
-        goodsService.save(goods);
-        System.out.println(goods);
+        goodsService.removeFromGoods(id);
+        System.out.println("delete");
     }
 }

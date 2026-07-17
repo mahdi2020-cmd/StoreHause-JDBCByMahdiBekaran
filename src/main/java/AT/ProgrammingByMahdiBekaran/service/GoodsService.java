@@ -21,4 +21,13 @@ public class GoodsService {
             System.out.println("this data succeffullt to goods database seved :)");
         }
     }
+
+    // this method for delete
+    public void removeFromGoods(int id) throws SQLException {
+        if (!goodsRepositorz.isExistsById(id))
+            System.out.println("this thing nicht exists !");
+        goodsRepositorz.removeByID(id);
+        System.out.println("this item successfully removed :) ");
+
+    }
 }

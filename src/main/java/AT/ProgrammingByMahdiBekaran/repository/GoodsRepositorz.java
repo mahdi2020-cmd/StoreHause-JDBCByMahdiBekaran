@@ -40,4 +40,23 @@ public class GoodsRepositorz {
         return find;
 
     }
+    //check the id exists oder
+    public boolean isExistsById(int id) throws SQLException {
+        String query = "SELECT * FROM goods g WHERE g.id = ? ";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, id);
+        final ResultSet resultSet = preparedStatement.executeQuery();
+        final boolean next = resultSet.next();
+        return next;
+    }
+
+    // remove method
+    public int removeByID(int id) throws SQLException {
+        String query = "DELETE FROM goods g WHERE g.id = ? ";
+        final PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, id);
+        final int i = preparedStatement.executeUpdate();
+        return i;
+
+    }
 }
